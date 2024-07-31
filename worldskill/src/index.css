@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('C:\Users\olimpídas\Documents\Nova pasta\worldskill\src\asset\fonts\Montserrat-Bold.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('C:\Users\olimpídas\Documents\Nova pasta\worldskill\src\asset\fonts\Montserrat-Medium.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('C:\Users\olimpídas\Documents\Nova pasta\worldskill\src\asset\fonts\Montserrat-Regular.ttf');
+  font-weight: 100;
+}
+:root{
+  --textBlue-color: #2c4674;
+  --textWhite-color: #ffffff;
+  --homeBackBluWhite-color: #c8daff;
+  --homeBackBlue-color: #2c4674;
+  --searchgreen-color: #519e8a;
+  --searchorange-color: #d1723f;
+  --searchBackGrenn-color: #cbe0db;
+  --searchBackorenage-color: #e8dbd4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
