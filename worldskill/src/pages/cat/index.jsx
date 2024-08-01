@@ -18,18 +18,7 @@ export default function Cat() {
     const [status, setStatus] = useState(false)
     const [ModelOpen, setModalOpen] = useState(false)
 
-    const Menubar = ({ Children, isOpen }) => {
-        if (isOpen) {
 
-            return createPortal(
-                <div className={style.Modal}>
-                    {Children}
-                </div>, document.body
-            )
-        }
-
-
-    }
 
     return (
         <div className={style.doby}>
@@ -122,7 +111,7 @@ export default function Cat() {
                         </div>
                     </div>
                     <div className={style.center}>
-                        <div className={style.card}>
+                        <div className={style.card}  onClick={() => (window.location.href = '/oneCats') }>
                             <div className={style.imge}>
                                 <img src={Karsten} alt="" className={style.ImgeOp} />
                             </div>
@@ -168,9 +157,7 @@ export default function Cat() {
 
 
 
-            </div>
-            <Menubar isOpen={ModelOpen} Children={
-                <div className={style.Main1}>
+                <div className={style.Main1} style={{transform : ModelOpen ? 'translateX(0px)' : 'translateX(414px)'}}>
                     <div className={style.ContAll}>
                         <div className={style.Titlee}>
                             Menu
@@ -199,7 +186,8 @@ export default function Cat() {
 
                     </div>
                 </div>
-            } />
+            </div>
+            
 
         </div>
     )

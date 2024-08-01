@@ -13,6 +13,7 @@
     width: 414px;
     height: 800px;
     border-radius: 40px;
+    position: absolute;
     overflow: hidden;
     background-color: var(--searchBackorenage-color);
 }
@@ -23,7 +24,9 @@
     width: 414px;
     height: 800px;
     border-radius: 40px;
+    transition: all 1s ease;
     overflow: hidden;
+    position: absolute;
     background-color: rgba(240, 248, 255, 0);
 }
 .Modal {
