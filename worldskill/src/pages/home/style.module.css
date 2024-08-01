@@ -16,7 +16,116 @@
     overflow: hidden;
     background-image:  linear-gradient(to top, var(--homeBackBlue-color), var(--homeBackBluWhite-color));
 }
+.Main1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 414px;
+    height: 800px;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: rgba(240, 248, 255, 0);
+}
+.Modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: transparent;
+    height: 100vh;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.a {
+    width: 100px;
+    background-color: black;
+  
+}
+.ContAll {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    border-radius: 40px;
+    width: 412px;
+    border:  1px solid var(--textBlue-color);
+    height: 800px;
+    background-image: linear-gradient(to top,  #ffffff91, var(--textWhite-color) );
+}
+.Titlee{
+    margin-top: 70px;
+    font-size: 24px;
+    font-weight: 200;
+    color: var(--textBlue-color);
+}
+.ImgeOp1 {
+    width: 30px;
+}
+.Button1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 90%;
+    color: var(--textWhite-color);
+    height: 50px;
+    padding: 10px;
+    border-radius: 60px;
+    font-size: 18px;
+    font-weight: 200;
+    background-color: var(--homeBackBlue-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
 
+}
+.Button2 {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 90%;
+    color: var(--textWhite-color);
+    height: 50px;
+    padding: 10px;
+    border-radius: 60px;
+    font-size: 18px;
+    font-weight: 200;
+    background-color: var(--searchgreen-color);
+    transition: all 0.3s ease;
+
+}
+.Button3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    justify-content: left;
+    width: 90%;
+    color: var(--textWhite-color);
+    height: 50px;
+    padding: 10px;
+    border-radius: 60px;
+    font-size: 18px;
+    font-weight: 200;
+    background-color: var(--searchorange-color);
+    transition: all 0.3s ease;
+}
+.Button3:hover, .Button1:hover, .Button2:hover{
+    transform: scale(105%);
+} 
+.Itens {
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+}
 
 .texteall{
     display: flex;

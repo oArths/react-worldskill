@@ -4,7 +4,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/home";
 import Dog from "./pages/dog";
-
+import Cat from "./pages/cat";
+import OneDog from "./pages/oneCat";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function RenderPage() {
@@ -17,9 +18,13 @@ function RenderPage() {
 
         case "Dogs":
             return <Dog />;
+        case "oneDogs":
+            return <OneDog />;
 
         case "Cats":
-            return <Home />;
+            return <Cat />;
+        case "OneCats":
+            return <Cat />;
 
         default:
             return <Home />;
