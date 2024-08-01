@@ -3,33 +3,62 @@ import ImgButton from '../../asset/images/1-search/chevron-left.svg'
 import menu from '../../asset/images/1-search/menu-open.svg'
 import search from '../../asset/images/1-search/search.svg'
 import cat from '../../asset/images/1-search/fa-solid_cat.svg'
+import catw from '../../asset/images/1-search/fa-solid_cat_white.svg'
+import home from '../../asset/images/1-search//fa-solid_home.svg'
 import dog from '../../asset/images/1-search/fa-solid_dog_white.svg'
 import hOMEsOLIDF from '../../asset/images/1-search/hearthome.svg'
 import beeji from '../../asset/images/1-search/dogs/benji.png'
 import Alban from '../../asset/images/1-search/dogs/alvan.png'
 import Karsten from '../../asset/images/1-search/dogs/karsten.png'
 import reigner from '../../asset/images/1-search/dogs/reigner.png'
+import close from '../../asset/images/1-search/menu-close.svg'
+import dogw from '../../asset/images/1-search/fa-solid_dog_white.svg'
+
+
 import { useState } from 'react'
+import { createPortal } from "react-dom"
 
 export default function Dog() {
     const [status, setStatus] = useState(false)
+    const [ModelOpen, setModalOpen] = useState(false)
+
+    const Menubar = ({ Children, isOpen }) => {
+        if (isOpen) {
+
+            return createPortal(
+                <div className={style.Modal}>
+                    {Children}
+                </div>, document.body
+            )
+        }
+
+
+    }
     return (
         <div className={style.doby}>
             <div className={style.Main}>
                 <div className={style.Header}>
-                    <div className={style.ContSelect}>
+                    <div className={style.ContSelect} onClick={() => (window.location.href = '/')}>
                         <img className={style.imgeButton} src={ImgButton} alt="" />
 
 
                     </div>
-                    <div className={style.Title}>
-                        Search
-                    </div>
                     <div className={style.ContSelect}>
-                        <img className={style.imgeButton} src={menu} alt="" />
-
-
+                        <div className={style.Title}>
+                            Search
+                        </div>
                     </div>
+                    {ModelOpen ? (
+                        <div className={style.ContSelect1} onClick={() => (setModalOpen(!ModelOpen), console.log(ModelOpen))}>
+                            <img className={style.imgeButton1} src={close} alt="" />
+
+                        </div>
+                    ) : (
+                        <div className={style.ContSelect1} onClick={() => (setModalOpen(!ModelOpen), console.log(ModelOpen))}>
+                            <img className={style.imgeButton1} src={menu} alt="" />
+
+                        </div>
+                    )}
                 </div>
                 <div className={style.SearchCont}>
                     <div className={style.contimgesearch}>
@@ -38,18 +67,18 @@ export default function Dog() {
                     <input type="text" className={style.input} />
 
                 </div>
-                    <div className={style.centerbutton}>
-                        <div className={style.ButtonOp}>
-                            <img src={dog} alt="" className={style.ImgdeOp} />
+                <div className={style.centerbutton}>
+                    <div className={style.ButtonOp}>
+                        <img src={dog} alt="" className={style.ImgdeOp} />
 
-                            Dogs
-                        </div>
-                        <div className={style.ButtonOp1}>
-                            <img src={cat} alt="" className={style.ImgdeOp} />
-
-                            Cats
-                        </div>
+                        Dogs
                     </div>
+                    <div className={style.ButtonOp1} onClick={() => (window.location.href = '/Cats')}>
+                        <img src={cat} alt="" className={style.ImgdeOp} />
+
+                        Cats
+                    </div>
+                </div>
                 <div className={style.Grid}>
 
                     <div className={style.center}>
@@ -67,7 +96,7 @@ export default function Dog() {
                                     </div>
                                 </div>
                                 <div className={style.Icon}>
-                                    <img src={hOMEsOLIDF} alt="" className={style.ImgeOp2} />
+                                    <div className={style.ImgeOp2} />
 
                                 </div>
                             </div>
@@ -88,7 +117,7 @@ export default function Dog() {
                                     </div>
                                 </div>
                                 <div className={style.Icon}>
-                                    <img src={hOMEsOLIDF} alt="" className={style.ImgeOp2} />
+                                    <div className={style.ImgeOp2} />
 
                                 </div>
                             </div>
@@ -109,7 +138,7 @@ export default function Dog() {
                                     </div>
                                 </div>
                                 <div className={style.Icon}>
-                                    <img src={hOMEsOLIDF} alt="" className={style.ImgeOp2} />
+                                    <div  className={style.ImgeOp2} />
 
                                 </div>
                             </div>
@@ -130,7 +159,7 @@ export default function Dog() {
                                     </div>
                                 </div>
                                 <div className={style.Icon}>
-                                    <img src={hOMEsOLIDF} alt="" className={style.ImgeOp2} />
+                                    <div className={style.ImgeOp2}></div>
 
                                 </div>
                             </div>
@@ -142,6 +171,37 @@ export default function Dog() {
 
 
             </div>
+            <Menubar isOpen={ModelOpen} Children={
+                <div className={style.Main1}>
+                    <div className={style.ContAll}>
+                        <div className={style.Titlee}>
+                            Menu
+                        </div>
+                        <div className={style.Button1} onClick={() => (window.location.href = '/')}>
+                            <div className={style.Itens}>
+                                <img src={home} alt="" className={style.ImgeOp1} />
+                                Home
+
+                            </div>
+                        </div>
+                        <div className={style.Button2} onClick={() => (window.location.href = '/Dogs')}>
+                            <div className={style.Itens}>
+                                <img src={dogw} alt="" className={style.ImgeOp1} />
+                                Dogs
+
+                            </div>
+                        </div>
+                        <div className={style.Button3} onClick={() => (window.location.href = '/Cats')}>
+                            <div className={style.Itens}>
+                                <img src={catw} alt="" className={style.ImgeOp1} />
+                                Cats
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            } />
         </div>
     )
 }
