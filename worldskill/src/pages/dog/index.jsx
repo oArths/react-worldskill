@@ -6,7 +6,6 @@ import cat from '../../asset/images/1-search/fa-solid_cat.svg'
 import catw from '../../asset/images/1-search/fa-solid_cat_white.svg'
 import home from '../../asset/images/1-search//fa-solid_home.svg'
 import dog from '../../asset/images/1-search/fa-solid_dog_white.svg'
-import hOMEsOLIDF from '../../asset/images/1-search/hearthome.svg'
 import beeji from '../../asset/images/1-search/dogs/benji.png'
 import Alban from '../../asset/images/1-search/dogs/alvan.png'
 import Karsten from '../../asset/images/1-search/dogs/karsten.png'
@@ -16,24 +15,10 @@ import dogw from '../../asset/images/1-search/fa-solid_dog_white.svg'
 
 
 import { useState } from 'react'
-import { createPortal } from "react-dom"
 
 export default function Dog() {
-    const [status, setStatus] = useState(false)
     const [ModelOpen, setModalOpen] = useState(false)
 
-    const Menubar = ({ Children, isOpen }) => {
-        if (isOpen) {
-
-            return createPortal(
-                <div className={style.Modal}>
-                    {Children}
-                </div>, document.body
-            )
-        }
-
-
-    }
     return (
         <div className={style.doby}>
             <div className={style.Main}>
@@ -124,7 +109,7 @@ export default function Dog() {
                         </div>
                     </div>
                     <div className={style.center}>
-                        <div className={style.card}>
+                        <div className={style.card} onClick={() => (window.location.href = '/oneDogs')} >
                             <div className={style.imge}>
                                 <img src={Karsten} alt="" className={style.ImgeOp} />
                             </div>
@@ -138,7 +123,7 @@ export default function Dog() {
                                     </div>
                                 </div>
                                 <div className={style.Icon}>
-                                    <div  className={style.ImgeOp2} />
+                                    <div className={style.ImgeOp2} />
 
                                 </div>
                             </div>
@@ -168,11 +153,7 @@ export default function Dog() {
 
                 </div>
 
-
-
-            </div>
-            <Menubar isOpen={ModelOpen} Children={
-                <div className={style.Main1}>
+                <div className={style.Main4} style={{ transform: ModelOpen ? 'translateX(0px)' : 'translateX(414px)' }}>
                     <div className={style.ContAll}>
                         <div className={style.Titlee}>
                             Menu
@@ -201,7 +182,8 @@ export default function Dog() {
 
                     </div>
                 </div>
-            } />
+            </div>
+
         </div>
     )
 }

@@ -14,30 +14,25 @@
     height: 800px;
     border-radius: 40px;
     overflow: hidden;
+    position: absolute;
     background-color: var(--searchBackGrenn-color);
 }
-.Main1 {
+
+
+
+.Main4{
     display: flex;
     flex-direction: column;
     justify-content: start;
     width: 414px;
     height: 800px;
     border-radius: 40px;
-    overflow: hidden;
-    background-color: rgba(240, 248, 255, 0);
-}
-.Modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    background-color: transparent;
-    height: 100vh;
-    background-color: transparent;
+    transition: all 1s ease;
     position: absolute;
-    top: 0;
+    background-color: rgba(240, 248, 255, 0);
     z-index: 2;
 }
+
 .a {
     width: 100px;
     background-color: black;
@@ -132,7 +127,7 @@
     flex-direction: row;
     align-items: end;
     height: 7vh;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .ContSelect {
     width: 20%;
@@ -184,7 +179,13 @@
 .imgeButton:hover {
     transform: translateX(-10px);
 }
+.ContSelect1{
+    margin-right: 40px;
+    position: relative;
+    z-index: 3;
+}
 .imgeButton1 {
+    width: 30px;
     cursor: pointer;
 }
 .input {
