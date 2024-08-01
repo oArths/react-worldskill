@@ -14,7 +14,7 @@
     height: 800px;
     border-radius: 40px;
     overflow: hidden;
-    background-color: var(--searchBackGrenn-color);
+    background-color: var(--searchBackorenage-color);
 }
 .Main1 {
     display: flex;
@@ -41,7 +41,6 @@
 .a {
     width: 100px;
     background-color: black;
-  
 }
 .ContAll {
     display: flex;
@@ -51,11 +50,15 @@
     justify-content: start;
     border-radius: 40px;
     width: 412px;
-    border:  1px solid var(--textBlue-color);
+    border: 1px solid var(--textBlue-color);
     height: 800px;
-    background-image: linear-gradient(to top,  #ffffff91, var(--textWhite-color) );
+    background-image: linear-gradient(
+        to top,
+        #ffffff91,
+        var(--textWhite-color)
+    );
 }
-.Titlee{
+.Titlee {
     margin-top: 70px;
     font-size: 24px;
     font-weight: 200;
@@ -79,7 +82,6 @@
     background-color: var(--homeBackBlue-color);
     transition: all 0.3s ease;
     cursor: pointer;
-
 }
 .Button2 {
     cursor: pointer;
@@ -97,7 +99,6 @@
     font-weight: 200;
     background-color: var(--searchgreen-color);
     transition: all 0.3s ease;
-
 }
 .Button3 {
     display: flex;
@@ -116,9 +117,11 @@
     background-color: var(--searchorange-color);
     transition: all 0.3s ease;
 }
-.Button3:hover, .Button1:hover, .Button2:hover{
+.Button3:hover,
+.Button1:hover,
+.Button2:hover {
     transform: scale(105%);
-} 
+}
 .Itens {
     margin-left: 10px;
     display: flex;
@@ -128,13 +131,12 @@
 }
 
 .Header {
-    display: flex;
-    flex-direction: column;
-    align-items:start;
-    height: 7vh;
-    position: absolute;
-    left: 25vw;
-    justify-content: space-around;
+    position: relative;
+
+    height:10px;
+    width: 100%;
+        z-index: 3;
+    top: 10px;
 }
 .ContSelect {
     width: 20%;
@@ -142,6 +144,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .Op {
     width: 10px;
@@ -222,24 +225,73 @@
     justify-content: center;
 }
 .ButtonOp {
+
     display: flex;
     flex-direction: row;
     font-size: 18px;
     font-weight: 200;
     color: var(--textWhite-color);
     border-radius: 40px;
-    background-color: var(--searchgreen-color);
+    background-color: var(--searchorange-color);
     align-items: center;
     gap: 20px;
-    justify-content: left;
-    width: 40%;
+    justify-content: center;
+    width: 90%;
     padding: 5px;
-    height: 40px;
+    height: 60px;
     padding-left: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.NamesAS{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+
+}
+.NamesASs2{
+    margin-top: 500px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20PX;
+    width: 100%;
+    height: 10%;
+
+}
+.vconUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 10%; */
+}
+.sds{
+    width: 90%;
+}
+.nameUsesr{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--textBlue-color);
+}
+.f{
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--textBlue-color);
+}
+.nameSubNaame{
+       font-size: 16px;
+    font-weight: 200;
+    color: var(--textBlue-color); 
+}
 .ButtonOp1 {
+    margin-top: 200px;
     transition: all 0.3s ease;
     display: flex;
     cursor: pointer;
@@ -258,7 +310,7 @@
     padding-left: 10px;
 }
 .ButtonOp:hover {
-    transform: scale(110%);
+    transform: scale(105%);
 }
 .ButtonOp1:hover {
     transform: scale(110%);
@@ -269,60 +321,54 @@
     align-items: center;
     flex-direction: column;
     width: 414px;
-    height: 50%;
-    border-radius: 20px;
+    height: 60%;
+    border-radius: 40px;
     overflow: hidden;
+    /* padding-bottom: 40px; */
+    background-color: var(--searchorange-color);
 }
 
-/* .card:hover .imge {
-    background-color: var(--textWhite-color);
-} */
-/* .card:hover .ImgeOp {
-    transform: translateY(10px);
-} */
-
-/* .card:hover .ImgeOp2{
-    background-image: url("../../asset/images/1-search/hearthome-white.svg");
-} */
 .imge {
     display: flex;
     align-items: end;
-    justify-content: center;
+    justify-content: end;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    background-color: var(--searchgreen-color);
 }
 .ImgeOp {
     width: 100%;
     height: 100%;
+    /* transform: scale(120%); */
     object-fit: contain;
 }
 .textCont {
+    position: relative;
+    bottom: 111px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 80px;
-    padding-top: 10px;
     width: 100%;
 }
 .Names {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding-left: 20px;
-    justify-content: start;
+    align-items: center;
+    /* padding-left: 20px; */
+    justify-content: space-around;
+    border-radius: 20px;
     height: 80px;
-    width: 75%;
+    width: 20%;
+    background-color: #ffffffbd;
 }
 .nameUser {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
     color: var(--textBlue-color);
 }
 .nameSubName {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 200;
     color: var(--textBlue-color);
 }
@@ -334,5 +380,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 20px;
+            margin-top: 13px;
+
+    /* padding-bottom: 20px; */
 }
