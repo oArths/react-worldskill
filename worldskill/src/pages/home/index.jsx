@@ -6,6 +6,15 @@ import { useState } from 'react'
 
 export default function Home() {
     const [status, setStatus] = useState(false)
+    const [image, setImage] = useState(image1)
+
+
+    const Image = ({ Children }) => {
+            setImage(status ? image1 : image2)
+        return  Children
+
+    }
+
     return (
         <div className={style.doby}>
             <div className={style.Main}>
@@ -13,7 +22,7 @@ export default function Home() {
                     <div className={style.ContSelect}>
                         {status ? (
                             <>
-                                <a onClick={() => (setStatus(!status))} className={style.Op}>
+                                <a onClick={() => (setStatus(!status), console.log(status))} className={style.Op}>
                                 </a>
                                 <div className={style.OpSelect}>
                                 </div>
@@ -22,7 +31,7 @@ export default function Home() {
                             <>
                                 <div className={style.OpSelect}>
                                 </div>
-                                <a onClick={() => setStatus(!status)} className={style.Op}>
+                                    <a onClick={() => (setStatus(!status), console.log(status))} className={style.Op}>
                                 </a></>
 
 
@@ -38,21 +47,13 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                {status ? (
-                    <>
-                        <div className={style.Contimage}>
-                            <img className={style.image} src={image1} alt="" />
-                        </div>
-                    </>
-                ) : (
-                    <>
-                        <div className={style.Contimage}>
-                            <img className={style.image} src={image2} alt="" />
-                        </div>
-                    </>
+                <Image  Children={
+                    <div className={style.Contimage} >
+                        <img className={style.image} src={image} alt="" />
+                    </div>
 
+                }  />
 
-                )}
 
 
                 <div className={style.ButtonCont}>
@@ -61,6 +62,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
